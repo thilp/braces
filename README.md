@@ -64,9 +64,9 @@ Braces::Registry class.
     -   what comes after `-->` denotes the function's return type.
 
 -   The Braces::Registry class is used to change the way the `bsplit`
-    function treats characters. By default, `bsplit` use the Unicode database
-    (with Unicode::UCD) to know what characters are mirrored and which are
-    their symmetric. In addition, the registry stores whether you want
+    function treats characters. By default, `bsplit` uses the Unicode database
+    (with Unicode::UCD) to know what characters are mirrored and which closing
+    character they match. In addition, the registry stores whether you want
     unbalanced braces reported on stderr (default: no). You can change these
     defaults by instantiating your own Braces::Registry and providing it to
     your `bsplit` calls:
@@ -96,6 +96,6 @@ I did not prove it, but the algorithm used in the `bsplit` function is most
 likely linear in both time and space.
 No regexes are involved, so no backtracking concerns.
 All "hard" dependencies (Carp, Exporter and Unicode::UCD) are in core since a
-loong time so this module is virtually without dependency.
+loong time so this module is virtually without dependencies.
 If List::Util or List::MoreUtils are installed, it will use them, but it
 provides its own implementation in case they are not.
